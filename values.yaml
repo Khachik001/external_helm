@@ -1,0 +1,41 @@
+serviceaccount:
+  name: external-secrets-sa
+  namespace: external-secrets
+
+eks:
+  anotations: arn:aws:iam::548844171305:role/intern_eks-test-external-secrets-role
+
+clustersecretstore:
+  name: aws-secrets-manager
+
+aws:
+  service:
+    name: SecretsManager
+  region:
+    name: us-east-1
+
+externalsecret:
+  name: postgres-secrets-manager
+  namespace: default
+
+items:
+  - secretkey: POSTGRES_HOST
+    secretname: demo
+    property: POSTGRES_HOST
+
+  - secretkey: POSTGRES_PORT
+    secretname: demo
+    property: POSTGRES_PORT
+
+  - secretkey: POSTGRES_DATABASE
+    secretname: demo
+    property: POSTGRES_DATABASE
+
+  - secretkey: POSTGRES_USER
+    secretname: demo
+    property: POSTGRES_USER
+
+  - secretkey: POSTGRES_PASSWORD
+    secretname: demo
+    property: POSTGRES_PASSWORD 
+
