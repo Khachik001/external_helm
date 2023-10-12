@@ -1,3 +1,7 @@
+serviceaccount:
+  name: external-secrets-sa
+  namespace: external-secrets
+
 clustersecretstore:
   name: aws-secrets-manager
 
