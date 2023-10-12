@@ -1,5 +1,5 @@
 serviceaccount:
-  name: external-secrets
+  name: external-secrets-sa
   namespace: external-secrets
 
 clustersecretstore:
