@@ -13,7 +13,7 @@ aws:
 
 externalsecret:
   name: postgres-secrets-manager
-  namespace: default
+  namespace: external-secrets
 
 items:
   - secretkey: POSTGRES_HOST
