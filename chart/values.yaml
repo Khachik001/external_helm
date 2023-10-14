@@ -5,6 +5,9 @@ serviceaccount:
 clustersecretstore:
   name: aws-secrets-manager
 
+refreshInterval: "1m"
+
+
 aws:
   service:
     name: SecretsManager
